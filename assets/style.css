@@ -10,6 +10,10 @@
     background-color: #fff;
 }
 
+.bg-color-personal-info {
+    background-color: #f4f4f4;
+}
+
 .ui-menu-color-home {
     background-color: #e67e22;
 }
@@ -81,10 +85,8 @@ header {
     background: url("../assets/images/cameron.jpg");
     background-position: center;
     background-repeat:no-repeat;
-    background-size: cover ;
+    background-size: cover;
     min-height: 360px;
-    max-height: 550px;
-    max-width: 550px;
     transition: all .5s ease-in-out;
     -webkit-transition: all .5s ease-in-out;
     -moz-transition: all .5s ease-in-out;
@@ -226,5 +228,3 @@ footer {
     margin-bottom: 15px;
     text-decoration: underline;
 }
-
-.
