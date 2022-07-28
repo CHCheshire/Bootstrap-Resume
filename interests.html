@@ -20,7 +20,7 @@
                 <div class="row bg-color-name-title">
                     <div class="col heading">
                         <h1 class="name">Cameron Hughes-Cheshire</h1>
-                        <h2 class="title">Full Stack Developer</h2>
+                        <h2 class="title">Studying for Diploma in Software Development</h2>
                     </div>
                 </div>
                 <div class="row">
@@ -60,7 +60,9 @@
                         <h3 class="section-heading uppercase">Conferences and Meetups attended</h3>
                     </div>
                 </div>
-                <div id="map"></div>
+                <div id="map">
+
+                </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-8 bg-color-groups section-column">
                 <div class="row">
@@ -110,11 +112,11 @@
                                 <i class="three-reasons-icon fa fa-users" aria-hidden="true"></i>
                             </div>
                             <div class="col-xs-10 col-sm-10">
-                                <h4 class="three-reasons-heading uppercase">Full Stack NY</h4>
+                                <h4 class="three-reasons-heading uppercase">Learning Norwegian</h4>
                                 <p>
-                                    Our meetup is an event where web designers and developers can come together to learn from and teach each other about emerging technologies. While speakers at Full Stack focus primarily on angularjs, react, node, hapiJS, espress, plain ole' JavaScript,
-                                    HTML, and CSS, we encourage all local web professionals to join us for vivid discussions around technology across the stack in any language.
-                                    <a href="https://www.meetup.com/javascript-full-stack-development/" target="_blank">Full Stack NY</a>
+                                    In my spare time I am trying to learn Norwegian, taking lessons on Duolingo. I have been doing it on and off for about 
+                                    4 months now and I'm starting to pick up the basics. My partner had gotten me into as she's quiet fluent in it 
+                                    herself and I always wanted to try and learn a second language. 
                                 </p>
                             </div>
                         </div>
@@ -125,11 +127,12 @@
                                 <i class="three-reasons-icon fa fa-users" aria-hidden="true"></i>
                             </div>
                             <div class="col-xs-10 col-sm-10">
-                                <h4 class="three-reasons-heading uppercase">IoT Nation</h4>
+                                <h4 class="three-reasons-heading uppercase">Excercising</h4>
                                 <p>
-                                    IoT Nation's mission is to inspire, engage, and connect entrepreneurs, investors, professionals, & enthusiasts worldwide who are active in the Internet of Things (IoT). This group is for professionals and enthusiasts in the Internet of Things. We welcome
-                                    those who want to learn about this emerging field which is fascinating as IoT makes use of a diverse range of technologies and has the promise to impact a vast number of vertical markets.
-                                    <a href="https://www.meetup.com/NYCIOT/" target="_blank">IoT Nation</a>
+                                    I've always tried to do some form of exercise in my spare, during my last years at high school and during college I'd
+                                    practiced TaeKwonDo and Ju-Jitsu for a while at university but nowadays I go to the gym a few times a week instead. 
+                                    I find it helps mentally more than anything as it's a good way to unwind, especially when I've been working from home
+                                    and I've not been able to get out all day. 
                                 </p>
                             </div>
                         </div>
@@ -182,5 +185,33 @@
             </div>
         </div>
      </footer>
+     <script>
+        function initMap () {
+            var map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 3,
+                center: {
+                    lat:46.619261,
+                    lng:-33.134766
+                }
+            });
+
+            var labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+            var location = [
+                { lat: 52.0273, lng:-0.7944   },
+                {  lat: 52.0345, lng:-0.7945  }
+            ];
+            var markers = location.map(function(location, i) {
+                return new google.maps.Marker({
+                    position: location,
+                    label: labels[i % labels.length]
+                });
+            });
+
+            var markerCluster = new MarkerClusterer(map, markers, { imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m' });
+        }
+     </script>
+     <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQ4GLnPMqY1wn7e7Cl5h3n_scCB66uGyk&callback=initMap"></script>
 </body>
 </html>
